@@ -8,7 +8,7 @@ import (
 func main() {
 	arguments := os.Args
 
-	raid2.CheckValid(arguments[1:])
+	raid2.CheckValid(os.Args[1]])
 
 	raid2.CheckPossible()
 
@@ -26,22 +26,3 @@ func main() {
 
 	raid2.DrawGrid()
 }
-
-
-//"raidd2"
-//"os"
-//"fmt"
-//)
-//
-//func main() {
-//board := parseInput(os.Args[1])
-//
-//printBoard(board)
-//
-//if backtrack(&board) {
-//	fmt.Println("The Sudoku was solved successfully:")
-//	printBoard(board)
-//} else {
-//	fmt.Printf("The Sudoku can't be solved.")
-//}
-//}
