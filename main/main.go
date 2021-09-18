@@ -3,18 +3,12 @@ package main
 import (
 	"os"
 	"raid2"
-	"fmt"
 )
 
 func main() {
 	arguments := os.Args
-	if raid2.CheckValid(os.Args[1]]) == nil {
-		fmt.Printf("Board not valid try diffrent argument")
-	} else {
-		// here is 2d board passed as  (board) == ([9][9]int)
-		// here should be solving algorithm
-		// and printing of grid
-	}
+
+	raid2.CheckValid(arguments[1:])
 
 	raid2.CheckPossible()
 
