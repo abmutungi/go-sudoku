@@ -22,8 +22,6 @@ func DrawGrid(grid *[9][9]int) {
 				fmt.Print(" ")
 			}
 		}
-		if i < 9-1 {
 			fmt.Println()
-		}
 	}
 }
