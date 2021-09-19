@@ -18,12 +18,12 @@ func DrawGrid(grid [9][9]int) {
 	for i := 0; i < 9; i++ {
 		for j := 0; j < 9; j++ {
 			fmt.Print(grid[i][j])
-			if j<9-1{
-			fmt.Print(" ")
+			if j < 9-1 {
+				fmt.Print(" ")
 			}
 		}
-		if i<9-1{
-		fmt.Println()
+		if i < 9-1 {
+			fmt.Println()
 		}
 	}
 }
