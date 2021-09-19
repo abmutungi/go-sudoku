@@ -15,7 +15,7 @@ func main() {
 
 	validInput, grid := raid2.NiksCheckValid(sudokuInput)
 
-	if !validInput {
+	if !validInput || len(arguments)==1{
 		fmt.Printf("%s\n", errorMessage)
 	} else {
 		raid2.SolveSudoku(&grid)
