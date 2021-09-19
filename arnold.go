@@ -22,6 +22,22 @@ func DrawGrid(grid *[9][9]int) {
 				fmt.Print(" ")
 			}
 		}
-			fmt.Println()
+		fmt.Println()
 	}
+}
+
+func ArnoldsCheckNumbersRepeated(numbers []int) bool {
+	// returns true if numbers IN the list are repeated
+	// returns false if numbers NOT repeated
+
+	for i := 0; i < len(numbers); i++ {
+		for j := 0; j < len(numbers); j++ {
+			if i != j {
+				if numbers[i] == numbers[j] && numbers[i]!=0{
+					return true //  there are duplicate values
+				}
+			}
+		}
+	}
+	return false // there are no duplicate values.
 }
