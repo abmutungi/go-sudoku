@@ -9,6 +9,8 @@ import (
 func main() {
 	errorMessage := "Error"
 
+	noOfSolutions := 1
+
 	arguments := os.Args
 
 	sudokuInput := arguments[1:]
@@ -18,6 +20,6 @@ func main() {
 	if !validInput || len(arguments)==1{
 		fmt.Printf("%s\n", errorMessage)
 	} else {
-		raid2.SolveSudoku(&grid)
+		raid2.SolveSudoku(&grid, &noOfSolutions)
 	}
 }
