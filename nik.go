@@ -4,17 +4,6 @@ import (
 	"fmt"
 )
 
-func CheckNumbersRepeated(numbers []int) bool {
-	for i := 0; i < len(numbers); i++ {
-		for j := 1; j < len(numbers); j++ {
-			if numbers[i] == numbers[j] && i != j && numbers[i] != 0 {
-				return true
-			}
-		}
-	}
-	return false
-}
-
 func NiksCheckValid(input []string) (bool, [9][9]int) {
 	explain := false
 
@@ -69,7 +58,7 @@ func NiksCheckValid(input []string) (bool, [9][9]int) {
 		}
 		// check if digits inside the input row are not repeating
 
-		if CheckNumbersRepeated(tempRow) {
+		if ArnoldsCheckNumbersRepeated(tempRow) {
 			if explain {
 				fmt.Println("numbers repeated in row.. exiting")
 			}
