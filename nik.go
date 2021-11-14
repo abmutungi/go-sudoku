@@ -14,6 +14,13 @@ func NiksCheckValid(input []string) (bool, [9][9]int) {
 	// init 2d grid
 	var grid [9][9]int
 
+	if len(input) < 8 {
+		if explain {
+			fmt.Println("Less the 9 rows in the input")
+		}
+		return false, grid
+	}
+
 	for i := 0; i < 9; i++ {
 		for j := 0; j < 9; j++ {
 			grid[i][j] = 0
@@ -94,6 +101,25 @@ func NiksCheckValid(input []string) (bool, [9][9]int) {
 		}
 		countrow++
 	}
+
+	// check numbers repeated in grid in the vertical axis
+	tempRow = []int{}
+	for i := 0; i < 9; i++ {
+		for j := 0; j < 9; j++ {
+			tempRow = append(tempRow, grid[j][i])
+		}
+		if ArnoldsCheckNumbersRepeated(tempRow) {
+			if explain {
+				fmt.Println("numbers repeated in row vertically.. exiting")
+			}
+			return false, grid
+		} else {
+			tempRow = []int{}
+		}
+
+	}
+
+	// check mini square
 
 	if explain {
 		fmt.Println()
