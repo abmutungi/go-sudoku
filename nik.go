@@ -14,9 +14,9 @@ func NiksCheckValid(input []string) (bool, [9][9]int) {
 	// init 2d grid
 	var grid [9][9]int
 
-	if len(input) < 8 {
+	if len(input) <= 8 {
 		if explain {
-			fmt.Println("Less the 9 rows in the input")
+			fmt.Println("Fewer than 9 rows in the input")
 		}
 		return false, grid
 	}
